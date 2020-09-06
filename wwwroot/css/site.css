@@ -86,3 +86,42 @@ body {
     font-size: 14pt;
     margin:0;
 }
+
+.button-custom {
+  width: 360px;
+  height: 60px;
+  background-color: #FFFFFF;
+}
+
+.title {
+  align-items: flex-end;
+  font-size: 60pt;
+  margin-top: 140px;
+  justify-content:center;
+}
+
+.sub-title {
+  margin-top: 70px;
+}
+
+.sub-title2 {
+  margin-top: 250px;
+}
+
+@media (max-width: 1199px) {
+  .title {
+      margin-top: 0px;
+  }
+  .sub-title {
+    margin-top: 0px;
+  }
+  .sub-title2 {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 991px) { 
+  .sub-title2 {
+      margin-top: 110px;
+  }
+}
