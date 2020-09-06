@@ -108,6 +108,73 @@ body {
   margin-top: 250px;
 }
 
+.photo-place {
+  background-image: url('../images/Layer 21.png');
+  background-repeat:no-repeat;
+  background-position-x:center;
+  padding-top: 210px;
+  height: 1120px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  margin-top: 130px;
+  padding: 35px 0;
+}
+
+.carousel-images {
+  margin-left: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-images img {
+  display: flex;
+  width: 356px;
+  height: 285px;
+  background-color: aqua;
+  transition: .5s;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.carousel-prev {
+  width: 70px;
+  height: 70px;
+  background-image: url('../images/icons8_back_70px.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  cursor: grab;
+}
+
+.carousel-next {
+  width: 70px;
+  height: 70px;
+  background-image: url('../images/icons8_back_70px.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+  position: absolute;
+  right: 0;
+  transform: rotate(180deg);
+  cursor: grab;
+}
+.frame {
+  position: absolute;
+  bottom: 11px;
+  left: 338px;
+  transition: .5s;
+}
+
 @media (max-width: 1199px) {
   .title {
       margin-top: 0px;
