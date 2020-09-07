@@ -7,10 +7,9 @@ namespace DeepDiveIntoEnglishLanding.Mocks
     public class MocksGallery : IGallery
     {
         private readonly string _defaultSorce;
-
-        public MocksGallery(string defaultSorce)
+        public MocksGallery()
         {
-            _defaultSorce = defaultSorce;       
+            _defaultSorce = @"images\default-image.png";
         }
         public IEnumerable<Image> GetAllImages()
         {

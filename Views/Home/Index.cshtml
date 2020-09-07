@@ -1,3 +1,5 @@
+@using DeepDiveIntoEnglishLanding.Models
+@model IEnumerable<Image>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -44,7 +46,7 @@
                 <div><b style="font-size:22pt;">піднімемо ваш англійський</b></div>
                 <div><b style="font-size:22pt;">на один або два рівні</b></div>
             </div>
-            <div class="row schedule justify-content-around">
+            <div class="row justify-content-around">
                 <div class="col-6 col-lg-2"><b style="font-size:30pt;">3</b><br>години/день</div>
                 <div class="col-6 col-lg-2"><b style="font-size:30pt;">5</b><br>днів/тиждень</div>
                 <div class="col-6 col-lg-2"><b style="font-size:30pt;">11</b><br>тижнів</div>
@@ -97,12 +99,12 @@
                     <div class="frame"><img src="~/images/Rectangle 5.png" /></div>
                     <div class="carousel-prev"></div>
                     <div class="carousel-images">
-                        @* @{ 
-                            foreach (var img in Model.Gallery)
+                        @{ 
+                            foreach (var img in Model)
                             { 
                                 <img src="@img.Source" />
                             }
-                        } *@
+                        }
                     </div>
                     <div class="carousel-next"></div>
                 </div>

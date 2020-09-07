@@ -7,14 +7,12 @@ namespace DeepDiveIntoEnglishLanding.Mocks
     public class MocksReview : IReviews
     {
         private readonly Review _defaultReview;
-        private readonly string _defaultSorce;
 
-        public MocksReview(string defaultSorce)
+        public MocksReview()
         {
-            _defaultSorce = defaultSorce;    
             _defaultReview = new Review
             {
-                ImageSource = _defaultSorce, 
+                ImageSource = @"images\default-image.png", 
                 Reviewer = "Прізвище Ім'я", 
                 Text = "Тут має бути відгук. Тут має бути відгук. " + 
                 "Тут має бути відгук. Тут має бути відгук. " + 
