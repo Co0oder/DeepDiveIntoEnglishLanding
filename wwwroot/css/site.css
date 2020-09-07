@@ -241,6 +241,10 @@ body {
   height: 100px;
 }
 
+#map {
+  height: 350px;
+}
+
 @media (max-width: 1199px) {
   .title {
       margin-top: 0px;
