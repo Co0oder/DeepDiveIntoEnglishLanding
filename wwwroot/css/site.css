@@ -245,6 +245,11 @@ body {
   height: 350px;
 }
 
+.my-footer {
+  height: 100px;
+  background-color: #00455E;
+}
+
 @media (max-width: 1199px) {
   .title {
       margin-top: 0px;
