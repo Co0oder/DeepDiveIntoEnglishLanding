@@ -175,6 +175,72 @@ body {
   transition: .5s;
 }
 
+.photo-place1 {
+  background-image: url('../images/Rectangle 11.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  padding-top: 170px;
+  position: relative;
+  bottom: 200px;
+}
+
+.review {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15pt;
+  color: #00455E;
+}
+.review-text {
+  font-style: italic;
+  width: 53%;
+  align-self: flex-end;
+}
+.review-text p {
+  position: relative;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.review-img {
+  position: relative;
+  display: table;
+  margin: 70px 60px 60px 10px;
+}
+.review-img img{
+  max-width: 400px
+}
+.review-img p {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  top: 108%;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+}
+.review-img::after {
+  border-style: solid;
+  border-width: 0 7px 7px 0;
+  border-color: #00455E;
+  content: " ";
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 100px;
+  height: 100px;
+}
+
+.review-img::before {
+  border-style: solid;
+  border-width: 7px 0 0 7px;
+  border-color: #00455E;
+  content: " ";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+}
+
 @media (max-width: 1199px) {
   .title {
       margin-top: 0px;
@@ -195,6 +261,12 @@ body {
   }
   .frame {
     left: 44px;
+  }
+  .review-text {
+    width: 100%;
+  }
+  .review {
+    justify-content: center;
   }
 }
 

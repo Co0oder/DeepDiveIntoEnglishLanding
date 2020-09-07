@@ -20,6 +20,7 @@ namespace DeepDiveIntoEnglishLanding
         {
             services.AddControllersWithViews();
             services.AddTransient<IGallery, MocksGallery>();
+            services.AddTransient<IReviews, MocksReview>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
