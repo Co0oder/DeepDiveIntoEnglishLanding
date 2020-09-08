@@ -12,7 +12,7 @@ namespace DeepDiveIntoEnglishLanding.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Source = table.Column<string>(nullable: true)
+                    Source = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -25,9 +25,9 @@ namespace DeepDiveIntoEnglishLanding.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Reviewer = table.Column<string>(nullable: true),
-                    Text = table.Column<string>(nullable: true),
-                    ImageSource = table.Column<string>(nullable: true)
+                    Reviewer = table.Column<string>(nullable: false),
+                    Text = table.Column<string>(nullable: false),
+                    ImageSource = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
