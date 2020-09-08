@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DeepDiveIntoEnglishLanding.Data;
 using DeepDiveIntoEnglishLanding.Interfaces;
 using DeepDiveIntoEnglishLanding.Mocks;
+using DeepDiveIntoEnglishLanding.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -29,8 +30,8 @@ namespace DeepDiveIntoEnglishLanding
             services.AddDbContext<AppDbContext>(option => option.UseSqlServer
             (Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
-            services.AddTransient<IGallery, MocksGallery>();
-            services.AddTransient<IReviews, MocksReview>();
+            services.AddTransient<IGallery, GalleryRepo>();
+            services.AddTransient<IReviews, ReviewRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +52,11 @@ namespace DeepDiveIntoEnglishLanding
                   pattern: "{controller=Home}/{action=Index}/{id?}"
                 );
             });
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                AppDbContext context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                DbObjects.Initial(context);
+            }
         }
     }
 }
